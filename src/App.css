@@ -1,7 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 header {
   margin: 5px;
   padding: 10px;
   border: 1px solid black;
+}
+img {
+  height: 200px;
+  border-radius: 105px;
 }
 .HeadText {
   color: red;
