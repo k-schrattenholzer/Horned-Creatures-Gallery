@@ -6,7 +6,6 @@ export default class Header extends React.Component {
         return (
             <header>
                 <h1 className='HeadText'>Creatures with Horns Image Gallery</h1>
-                <p>Filter the gallery below</p>
             </header>
         )
     }
