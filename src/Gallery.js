@@ -5,7 +5,7 @@ export default class Gallery extends React.Component {
     render() {
         return (
         
-        <div className='ImageSelect'>
+        <div className='Gallery'>
             {
                 this.props.images
                 .filter(image => {

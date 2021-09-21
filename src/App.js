@@ -20,7 +20,8 @@ export default class App extends React.Component {
 
       <div className="App">
         <Header />
-
+        
+        <p>looking for something in particular?</p>
         <select onChange={this.handleSelectKeyword}>
           <option value="narwhal">Narwhal</option>
           <option value="rhino">Rhino</option>

@@ -2,15 +2,51 @@
   margin: 0;
   padding: 0;
 }
+
+.App {
+  margin: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   margin: 5px;
   padding: 10px;
   border: 1px solid black;
+  align-items: center;
 }
+
 img {
   height: 200px;
-  border-radius: 105px;
+  width: 200px;
+  border-radius: 120px;
+  margin-bottom: 15px;
 }
+
+.App >p {
+  margin: 25px;
+}
+
 .HeadText {
   color: red;
+}
+
+.Gallery {
+  width:80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.CreatureEl {
+  margin: 10px;
+  padding: 40px;
+  border-radius: 170px;
+  border: dotted sienna 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
