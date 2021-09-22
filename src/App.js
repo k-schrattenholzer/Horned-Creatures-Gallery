@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import Header from './Header.js';
-import TypeList from './TypeList.js';
-import HornsList from './HornsList.js';
+import Dropdown from './Dropdown.js';
 import images from './data.js';
 import Gallery from './Gallery.js';
+import { hornsOptions, keywordOptions } from './utils.js';
 
 
 export default class App extends React.Component {
@@ -27,15 +27,15 @@ export default class App extends React.Component {
 
       <div className="App">
         <Header />
-        <TypeList
-        state = {this.state}
-        handleSelectKeyword = {this.handleSelectKeyword}
-        handleSelectHorns = {this.handleSelectHorns}
+        <Dropdown
+        currentState={this.state.keyword}
+        handleSelect = {this.handleSelectKeyword}
+        optionsList = { keywordOptions }
         />
-        <HornsList
-        state = {this.state}
-        handleSelectKeyword = {this.handleSelectKeyword}
-        handleSelectHorns = {this.handleSelectHorns}
+        <Dropdown
+        currentState={this.state.horns}
+        handleSelect = {this.handleSelectHorns}
+        optionsList = { hornsOptions }
         />
         
         <hr />
