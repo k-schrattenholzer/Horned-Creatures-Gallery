@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Dropdown extends Component {
+export default class Dropdown extends React.Component {
     render() {
         return (
             <div className="Select">

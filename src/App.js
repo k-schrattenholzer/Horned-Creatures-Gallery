@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import Header from './Header.js';
-import Dropdown from './Dropdown.js';
 import images from './data.js';
-import Gallery from './Gallery.js';
-import { hornsOptions, keywordOptions } from './utils.js';
+import Header from './components/Header.js';
+import FilterOptions from './components/FilterOptions.js';
+import Gallery from './components/Gallery.js';
+
 
 
 export default class App extends React.Component {
 
   state = {
     keyword: '',
-    horns: ''
+    horns: '',
+    hornsRef: 'horned creatures',
+    keyRef: 'cuties'
     }
 
     handleSelectKeyword = (e) => {
@@ -24,21 +26,18 @@ export default class App extends React.Component {
 
   render() {
     return (
-
       <div className="App">
-        <Header />
-        <Dropdown
-        currentState={this.state.keyword}
-        handleSelect = {this.handleSelectKeyword}
-        optionsList = { keywordOptions }
-        />
-        <Dropdown
-        currentState={this.state.horns}
-        handleSelect = {this.handleSelectHorns}
-        optionsList = { hornsOptions }
-        />
-        
-        <hr />
+
+        <div className="Header">
+          <Header />
+          <FilterOptions
+            keyword={this.state.keyword}
+            horns={this.state.horns}
+            keyRef={this.state.keyRef}
+            hornsRef={this.state.hornsRef}
+           />
+        </div>
+
         <Gallery
         images={images}
         keyword={this.state.keyword}
