@@ -12,8 +12,6 @@ export default class App extends React.Component {
   state = {
     keyword: '',
     horns: '',
-    hornsRef: 'horned creatures',
-    keyRef: 'cuties'
     }
 
     handleSelectKeyword = (e) => {
@@ -31,10 +29,10 @@ export default class App extends React.Component {
         <div className="Header">
           <Header />
           <FilterOptions
+            handleSelectHorns={this.handleSelectHorns}
+            handleSelectKeyword={this.handleSelectKeyword}
             keyword={this.state.keyword}
             horns={this.state.horns}
-            keyRef={this.state.keyRef}
-            hornsRef={this.state.hornsRef}
            />
         </div>
 

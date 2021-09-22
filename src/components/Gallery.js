@@ -23,7 +23,8 @@ export default class Gallery extends React.Component {
                     return false;
                 })
                 .map(creature => 
-                    <Creatures {...creature} />)
+                    <Creatures {...creature}
+                    key={creature.description} />)
             }
 
         </div>

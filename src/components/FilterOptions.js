@@ -8,16 +8,14 @@ export default class FilterOptions extends React.Component {
             <div className="Dropdowns">
             <Dropdown
             currentState={this.props.keyword}
-            handleSelect={this.handleSelectKeyword}
+            handleSelect={this.props.handleSelectKeyword}
             optionsList={keywordOptions}
-            ref={this.props.keyRef}
             />
     
             <Dropdown
             currentState={this.props.horns}
-            handleSelect={this.handleSelectHorns}
+            handleSelect={this.props.handleSelectHorns}
             optionsList={hornsOptions}
-            ref={this.props.hornsRef}
             />
           </div>
         )

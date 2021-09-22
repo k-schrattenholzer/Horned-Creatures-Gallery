@@ -7,7 +7,7 @@ export default [
       title: "UniWhal",
       description: "A unicorn and a narwhal nuzzling their horns",
       keyword: "narwhal",
-      horns: 1
+      horns: 2
     },
     {
       url:
