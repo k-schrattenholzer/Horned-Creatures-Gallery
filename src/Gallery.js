@@ -10,7 +10,7 @@ export default class Gallery extends React.Component {
                 this.props.images
                 .filter(image => {
                     if (!this.props.keyword) {return true}
-                    return image.keyword === this.props.keyword
+                    return image.keyword === this.props.keyword && image.horns === this.props.horns
                 })
                 .map(creature => 
                     <Creatures {...creature} />)
