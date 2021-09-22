@@ -19,7 +19,7 @@ export default class App extends React.Component {
     }
 
     handleSelectHorns = (e) => {
-      this.setState({horns: e.target.value})
+      this.setState({horns: Number(e.target.value)})
     }
 
   render() {
