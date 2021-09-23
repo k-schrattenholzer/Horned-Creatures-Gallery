@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
 import images from './data.js';
-import Header from './components/Header.js';
-import FilterOptions from './components/FilterOptions.js';
 import ImageGallery from './components/ImageGallery.js';
+import Header from './components/Header.js';
 
 
 
@@ -25,15 +24,11 @@ export default class Gallery extends React.Component {
   render() {
     return (
       <div className="App">
-
-        <div className="Header">
-          <Header />
-          <FilterOptions
-            handleSelectHorns={this.handleSelectHorns}
-            handleSelectKeyword={this.handleSelectKeyword}
-            keyword={this.state.keyword}
-            horns={this.state.horns}
-           /></div>
+        <Header 
+        handleSelectHorns={this.handleSelectHorns}
+        handleSelectKeyword={this.handleSelectKeyword}
+        keyword={this.state.keyword}
+        horns={this.state.horns} />
 
         <ImageGallery
         images={images}

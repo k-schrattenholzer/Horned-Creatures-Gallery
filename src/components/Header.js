@@ -1,15 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Title from './Title.js';
+import FilterOptions from './FilterOptions.js';
 
 export default class Header extends React.Component {
-    
     render() {
         return (
-            <header class='HCont'>
-                <h1 className='HeadText'>Creatures with Horns</h1>
-                <p>Image Gallery</p>
-                <Link to='/'>home</Link>
-            </header>
+            <div className="Title">
+                <Title />
+
+                <FilterOptions
+                    handleSelectHorns={this.props.handleSelectHorns}
+                    handleSelectKeyword={this.props.handleSelectKeyword}
+                    keyword={this.props.keyword}
+                    horns={this.props.horns}/>        
+            </div>
         )
     }
 }
