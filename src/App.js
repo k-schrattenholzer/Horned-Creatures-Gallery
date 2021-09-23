@@ -1,47 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react'
+import {
+    BrowserRouter as Router, 
+    Route, 
+    Switch,
+} from 'react-router-dom';
+import Gallery from './Gallery.js';
+import Home from './Home.js';
 import './App.css';
-import images from './data.js';
-import Header from './components/Header.js';
-import FilterOptions from './components/FilterOptions.js';
-import Gallery from './components/Gallery.js';
 
-
-
-export default class App extends React.Component {
-
-  state = {
-    keyword: '',
-    horns: '',
+export default class App extends Component {
+    render() {
+        return (
+            <div>
+                <Router>
+                    <Switch>
+                        <Route 
+                            path="/" 
+                            exact
+                            render={(routerProps) => <Home {...routerProps} />} 
+                        />
+                        <Route 
+                            path="/Gallery" 
+                            exact
+                            render={(routerProps) => <Gallery {...routerProps} />} 
+                        />
+                    </Switch>
+                </Router>
+            </div>
+        )
     }
-
-    handleSelectKeyword = (e) => {
-      this.setState({keyword: e.target.value})
-    }
-
-    handleSelectHorns = (e) => {
-      this.setState({horns: Number(e.target.value)})
-    }
-
-  render() {
-    return (
-      <div className="App">
-
-        <div className="Header">
-          <Header />
-          <FilterOptions
-            handleSelectHorns={this.handleSelectHorns}
-            handleSelectKeyword={this.handleSelectKeyword}
-            keyword={this.state.keyword}
-            horns={this.state.horns}
-           />
-        </div>
-
-        <Gallery
-        images={images}
-        keyword={this.state.keyword}
-        horns={this.state.horns} />
-
-      </div>
-    )
-  }
 }

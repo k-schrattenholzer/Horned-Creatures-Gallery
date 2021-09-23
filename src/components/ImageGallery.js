@@ -1,7 +1,7 @@
 import React from 'react';
 import Creatures from './Creatures.js';
 
-export default class Gallery extends React.Component {
+export default class ImageGallery extends React.Component {
     render() {
         return (
         
