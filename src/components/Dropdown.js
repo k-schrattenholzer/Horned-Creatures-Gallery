@@ -8,7 +8,7 @@ export default class Dropdown extends React.Component {
                 onChange={this.props.handleSelect}
                 value={this.props.currentState}
                 >
-                    <option value=''>All</option>
+                    <option value=''></option>
                    {
                     this.props.optionsList.map(
                     option => <option

@@ -17,27 +17,32 @@ body {
   align-items: center;
 }
 
-.Header {
-  margin-bottom: 25px;
-  width: 100%;
-  padding: 10px;
-  background-color: #A3BCB6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
+
+.Title {
+  display: flex;
+  background-color: #A3BCB6;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
+}
+.Title > * {
+  margin: 15px;
+}
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .Dropdowns {
   background-color: #A3BCB6;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .HeadText {
@@ -54,11 +59,16 @@ img {
   margin-bottom: 15px;
 }
 
-.Select {
-  margin: 10px;
+select {
+  margin: 19px;
   padding: 10px;
+  width: 330px;
+  height: 100%;
+  border-bottom: 0px;
+  border-radius: 3px;
+  font-size: 12px;
+  box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
 }
-
 .Gallery {
   width:80%;
   margin: 25px;
@@ -75,6 +85,7 @@ img {
   flex-direction: column;
   align-items: center;
   background-color: #f5c96375;
+  box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
 }
 
 .CreatureEl >p {
