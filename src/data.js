@@ -1,4 +1,5 @@
-// eslint-disable-next-line import/no-anonymous-default-export
+/* eslint-disable import/no-anonymous-default-export */
+
 export default [
     {
       url:
@@ -6,15 +7,15 @@ export default [
       title: "UniWhal",
       description: "A unicorn and a narwhal nuzzling their horns",
       keyword: "narwhal",
-      horns: 1
+      horns: 2
     },
     {
       url:
         "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80",
       title: "Rhino Family",
-      description: "Mother (or father) rhino with two babies",
+      description: "parent rhino with two babies",
       keyword: "rhino",
-      horns: 2
+      horns: 3
     },
     {
       url:
@@ -54,7 +55,7 @@ export default [
       title: "Baby Rhino",
       description: "This is actually a figurine but it looks kinda real",
       keyword: "rhino",
-      horns: 2
+      horns: 1
     },
     {
       url:
@@ -106,14 +107,14 @@ export default [
     },
     {
       url:
-        "http://lorempixel.com/500/700",
+        "http://lorempixel.com/500/400",
       title: "Mouflon",
       description: "Those horns though",
       keyword: "mouflon",
       horns: 2
     },
     {
-      url: "http://lorempixel.com/400/800",
+      url: "http://lorempixel.com/200/800",
       title: "Addax",
       description:
         "This guy is basically extinct but survives well in captivity, so they're frequently found in zoos",
@@ -121,8 +122,16 @@ export default [
       horns: 2
     },
     {
+      url: "http://lorempixel.com/400/600",
+      title: "Another Addax",
+      description:
+        "This guy is really a copy",
+      keyword: "addax",
+      horns: 1
+    },
+    {
       url:
-        "http://lorempixel.com/600/400",
+        "http://lorempixel.com/200/400",
       title: "Baby mouflon",
       description: "The cuteness that is a baby mouflon asleep",
       keyword: "mouflon",
@@ -130,7 +139,7 @@ export default [
     },
     {
       url:
-        "http://lorempixel.com/400/400",
+        "http://lorempixel.com/400/200",
       title: "Happy Jackson's Chameleon",
       description: "These are really common in Hawaii",
       keyword: "chameleon",

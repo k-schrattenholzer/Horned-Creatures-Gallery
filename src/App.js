@@ -1,48 +1,32 @@
-import React from 'react';
-import './App.css';
-import Header from './Header.js';
-import images from './data.js';
+import React, { Component } from 'react'
+import {
+    BrowserRouter as Router, 
+    Route, 
+    Switch,
+} from 'react-router-dom';
 import Gallery from './Gallery.js';
+import Home from './Home.js';
+import './App.css';
 
-
-export default class App extends React.Component {
-
-  state = {
-    keyword: ''
+export default class App extends Component {
+    render() {
+        return (
+            <div>
+                <Router>
+                    <Switch>
+                        <Route 
+                            path="/" 
+                            exact
+                            render={(routerProps) => <Home {...routerProps} />} 
+                        />
+                        <Route 
+                            path="/Gallery" 
+                            exact
+                            render={(routerProps) => <Gallery {...routerProps} />} 
+                        />
+                    </Switch>
+                </Router>
+            </div>
+        )
     }
-
-    handleSelectKeyword = (e) => {
-      this.setState({keyword: e.target.value})
-    }
-
-  render() {
-    return (
-
-      <div className="App">
-        <Header />
-
-        <div className="Select">
-          <p>looking for something in particular?</p>
-          <select onChange={this.handleSelectKeyword}>
-            <option value="">All</option>
-            <option value="narwhal">Narwhal</option>
-            <option value="rhino">Rhino</option>
-            <option value="unicorn">Unicorn</option>
-            <option value="unilego">Uni-Lego</option>
-            <option value="triceratops">Triceratops</option>
-            <option value="markhor">Markhor</option>
-            <option value="mouflon">Mouflon</option>
-            <option value="chameleon">Chameleon</option>
-            <option value="lizard">Lizard</option>
-            <option value="dragon">Dragon</option>
-          </select>
-        </div>
-        <hr />
-        <Gallery
-        images={images}
-        keyword={this.state.keyword} />
-
-      </div>
-    )
-  }
 }

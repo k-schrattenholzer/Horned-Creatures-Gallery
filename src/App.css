@@ -1,7 +1,13 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+
+body {
   margin: 0;
   padding: 0;
+  font-family: 'Lekton', sans-serif;
+  color: #3C403D;
+  background-color: #DADED4;
 }
+
 
 .App {
   margin: 25px;
@@ -11,48 +17,50 @@
   align-items: center;
 }
 
-header {
-  margin: 5px;
+.Header {
+  margin-bottom: 25px;
+  width: 100%;
   padding: 10px;
+  background-color: #A3BCB6;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Dropdowns {
+  background-color: #A3BCB6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.HeadText {
+  background-color: #A3BCB6;
+  font-size: 4.5em;
+  letter-spacing: -1px;
+  padding: 5px;
+}
+
 img {
-  height: 200px;
-  width: 200px;
+  height: 140px;
+  width: 160px;
   border-radius: 120px;
   margin-bottom: 15px;
 }
 
-.App >p {
-  margin: 25px;
-}
-
 .Select {
-  display:grid;
-  grid-template-rows: 1fr 1fr;
   margin: 10px;
   padding: 10px;
 }
 
-hr {
-  width: 100%;
-  
-}
-
-.HeadText {
-  font-family: "Arial Black", sans-serif;
-  font-size: 4.5em;
-  letter-spacing: -1px;
-  background-color: black;
-  color: white;
-  padding: 5px;
-}
-
 .Gallery {
   width:80%;
+  margin: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -65,4 +73,11 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f5c963bd;
+  border-radius: 100%;
+}
+.CreatureEl >p {
+  background-color: rgba(255, 255, 255, 0.815);
+  padding: 12px;
+  border-radius: 35%;
 }
