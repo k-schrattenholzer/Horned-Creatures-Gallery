@@ -17,6 +17,9 @@ export default class FilterOptions extends React.Component {
             handleSelect={this.props.handleSelectHorns}
             optionsList={hornsOptions}
             />
+            <p>
+            currently showing all {this.props.keyword}s with {this.props.horns} horn(s)
+            </p>
           </div>
         )
     }

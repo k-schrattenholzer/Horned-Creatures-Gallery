@@ -4,7 +4,6 @@ export default class Dropdown extends React.Component {
     render() {
         return (
             <div className="Select">
-                <p>showing all {this.props.currentState}</p>
                 <select 
                 onChange={this.props.handleSelect}
                 value={this.props.currentState}
